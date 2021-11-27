@@ -1,0 +1,36 @@
+sweep_config = {
+   'method': 'grid',
+   'metric': {
+      'name': 'val_loss',
+      'goal': 'minimize' ,  
+   },
+   'parameters': {
+       'kernelsize1': {
+           'values': [64,96]
+       },
+       'kernelsize2': {
+           'values': [64,96]
+       },
+       'filter': {
+           'values': [3]  
+       },
+       'activation': {
+           'values': ['gelu']
+       },
+       'initializer': {
+           'values': ['he_uniform']
+       },
+       'layers': {
+           'values': [256]
+       },
+       'optimizer': {
+           'values' : ['nadam']
+       },
+       'learning_rate' : {
+           'values' : [1e-3]           
+       },
+       'loss_func' : {
+           'values' : ['binary_crossentropy']
+       },
+    }
+}
